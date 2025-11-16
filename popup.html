@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>entab-D</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <div class="popup_container">
+    <header class="popup_header">
+      <h1 class="title">entab-D</h1>
+      <p class="subtitle">Organize your tabs effortlessly</p>
+    </header>
+
+    <section class="popup_section">
+      <h2 class="section_title">Auto Grouping</h2>
+
+      <div class="toggle_row">
+        <label class="switch">
+          <input type="checkbox" id="autoGroupToggle">
+          <span class="switch_slider"></span>
+        </label>
+        <span class="switch_label">Enable Auto Grouping</span>
+      </div>
+    </section>
+
+    <section class="popup_section">
+      <h2 class="section_title">Manual Actions</h2>
+
+      <div class="action_row">
+        <button id="groupTabs" class="btn_primary">Group Tabs Now</button>
+        <label class="checkbox_label">
+          <input type="checkbox" id="collapseGroups"> Collapse groups after grouping
+        </label>
+      </div>
+
+      <div class="action_row">
+        <button id="scanDup" class="btn_secondary">Scan for Duplicates</button>
+        <select id="keepPref" class="select_input">
+          <option value="oldest">Keep Oldest</option>
+          <option value="newest">Keep Newest</option>
+        </select>
+        <button id="closeDup" class="btn_danger" disabled>Close Duplicates</button>
+      </div>
+    </section>
+
+    <div id="dupList" class="list_container"></div>
+
+    <footer class="popup_footer">
+      <a href="options.html" target="_blank" class="link_button">Rules &amp; Settings</a>
+    </footer>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>
